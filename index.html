@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="timer">
+                <div class="timer__body">
+                    <div class="timer__title">Работа</div>
+                    <div class="timer__time">
+                        <span id="minute">24</span>:<span id="second">59</span>
+                    </div>
+                </div>
+                <div class="timer__buttons">
+                    <button class="timer__btn">Начать</button>
+                    <button class="timer__btn-reset">Сбросить</button>
+                </div>
+            </div>
+            <div class="todo-list">
+                <h1 class="todo-list__title">Todo List</h1>
+                <input type="text" class="todo-list__message" placeholder="Описание">
+                <button class="todo-list__btn">Добавить</button>
+                <ul class="todo">
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

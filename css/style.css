@@ -1,0 +1,149 @@
+* {padding: 0px;margin: 0px;border: 0px;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active {outline: none;}
+aside,nav,footer,header,section {display: block;}
+html,body {height: 100%;margin: 0;padding: 0;min-width: 320px;position: relative;width: 100%;color: #000;}
+body{font-size: 100%;line-height: 1;font-size: 14px;font-family: "";-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+input,button,textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a,a:visited {text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-weight: inherit;font-size: inherit;}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffd51cfd;
+}
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:50px;
+}
+.todo-list {
+    width: 768px;
+    background-color: #1bcad6;
+    border-radius: 0 0 13px 13px;
+    text-align: center;
+    padding:40px;
+    position: relative;
+}
+
+.todo-list__title {
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: #fff;
+    position: relative;
+    cursor: default;
+}
+.todo-list__message {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 0 10px 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.todo-list__btn {
+    width: 50%;
+    padding: 12px  0;
+    margin: 15px auto 30px;
+    transition: all .5s ease;
+    font-size: 18px;
+    font-weight: 600;
+}
+.todo-list__btn:hover {
+    background-color: #ffce2d;
+}
+.impotent {
+    color: #ff4006;
+    font-weight: 600;
+}
+.todo {
+    width: 100%;
+    text-align: left;
+}
+.todo li {
+    padding: 15px;
+    font-size: 16px;
+    border-top: 1px solid #000;
+} 
+    
+.todo :first-child {
+    border: none;
+}
+.todo .close {
+    cursor: pointer;
+    float: right;
+    font-size: 30px;
+    font-weight: 600;
+}
+.timer {
+    display: flex;
+    justify-content: space-between;
+    width: 768px;
+    padding: 15px 10px;
+    background-color: #1bcad6;
+    border-radius: 13px 13px 0 0;
+    border-bottom: 3px solid #000;
+    font-weight: 600;
+}
+.timer__time {
+    margin: 10px 0;
+    color: #fff;
+}
+.timer__btn, .timer__btn-reset {
+    border-radius: 5px;
+    padding: 5px 12px;
+    background-color: #fff;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .todo-list {
+        width: 90%;
+        padding: 10px;
+    }
+    .timer {
+        width: 90%;
+    }
+    .todo-list__btn {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
