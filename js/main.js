@@ -13,6 +13,7 @@ if (!!localStorage.getItem('todo')) {
     displayMessges()
 }
 
+
 message.addEventListener('keyup', event => { if (event.keyCode == 13 ) clickListener() }) // при нажатии кнопки Enter
 addButton.addEventListener('click', clickListener)
 
@@ -50,7 +51,7 @@ function displayMessges() {
         displayMessage += `
         <li>
         <input class="check" type="checkbox" id="item__${i}"  ${item.checked ? 'checked' : ''}>
-        <label  for="item__${i}" class="${item.impotent ? 'impotent' : ''}">${item.todo}</label>
+        <label for="item__${i}" class="${item.impotent ? 'impotent' : ''}">${item.todo}</label>
         <span class="close">&times</span>
         </li>`
         todo.innerHTML = displayMessage
@@ -95,7 +96,7 @@ todo.addEventListener('click', event => {
     }
 })
 
-// Taimer 
+// Taimer Pomodoro
 let timeMinute = document.querySelector('#minute')
     , timeSecond = document.querySelector('#second')
     , timeTitle = document.querySelector('.timer__title')
@@ -120,18 +121,19 @@ function timerStart() {
         localStorage.setItem('minute', timeMinute.textContent)
 
         timeSecond.textContent = --timeSecond.textContent
-
-        if (timeSecond.textContent < 10) {
-            timeSecond.textContent = '0' + --timeSecond.textContent
-            localStorage.setItem('second', timeSecond.textContent)
-        }
         if (timeMinute.textContent == 0 && timeSecond.textContent == 0) {
-            toggle()   
-        } else if (timeSecond.textContent == 0) {
-            timeSecond.textContent = 59
-            timeMinute.textContent = --timeMinute.textContent
-            localStorage.setItem('minute', timeMinute.textContent)
+            toggle()
         }
+        if (timeSecond.textContent < 10) {
+            timeSecond.textContent = '0' + timeSecond.textContent
+            localStorage.setItem('second', timeSecond.textContent)
+            if (timeSecond.textContent == 0) {
+                timeSecond.textContent = 59
+                timeMinute.textContent = --timeMinute.textContent
+                localStorage.setItem('minute', timeMinute.textContent)
+            }
+        }
+        
     },1000) 
 }
 // остановка таймера
