@@ -2,8 +2,8 @@ let message = document.querySelector('.todo-list__message')
     ,addButton = document.querySelector('.todo-list__btn')
     ,todo = document.querySelector('.todo')
     ,timerBtn = document.querySelector('.timer__btn')
-    ,stopTimerBtn = document.querySelector('.timer__btn-stop')
     ,resetTimerBtn = document.querySelector('.timer__btn-reset')
+    ,audio = document.querySelector('.audio')
     ,todoList = []
     
   
@@ -154,13 +154,15 @@ function resetTimer() {
 // переключаем режимы отдых и работа
 function toggle() {
     if (timeTitle.textContent == 'Работа') {
+        audioPlay()
         timeTitle.textContent = 'Отдых'
         timeMinute.textContent = 4
         timeSecond.textContent = 59
     }else {
+        audioPlay()
         timeTitle.textContent = 'Работа'
         timeMinute.textContent = 24
-        timeSecond.textContent = 59  
+        timeSecond.textContent = 59
     }
 }
 // получаем инфу в localStorage 
@@ -170,4 +172,11 @@ let saveMinute = localStorage.getItem('minute')
 if (!!saveMinute && !!saveSecond) {
     timeSecond.textContent = saveSecond
     timeMinute.textContent = saveMinute
+}
+
+function audioPlay() {
+    audio.play()  
+    setTimeout(() => {
+        audio.pause()    
+    },4000)
 }
